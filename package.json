@@ -1,0 +1,36 @@
+{
+  "name": "weaver",
+  "version": "1.0.0",
+  "description": "Cross language scaffold script.",
+  "main": "lib/weaver.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint src/**.js ; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LanceGin/weaver.git"
+  },
+  "keywords": [
+    "scaffold",
+    "shell",
+    "framework",
+    "node",
+    "commander"
+  ],
+  "author": "lancegin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LanceGin/weaver/issues"
+  },
+  "homepage": "https://github.com/LanceGin/weaver#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.3"
+  }
+}
