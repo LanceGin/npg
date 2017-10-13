@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 /**
  *  desc: entry file
  *
  **/
 
-console.log('entry file');
+console.log('hello world');

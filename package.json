@@ -2,9 +2,13 @@
   "name": "weaver",
   "version": "1.0.0",
   "description": "Cross language scaffold script.",
+  "bin": {
+    "weaver": "./lib/weaver.js"
+  },
   "main": "lib/weaver.js",
   "scripts": {
     "test": "mocha",
+    "build": "babel src -d lib",
     "lint": "eslint src/**.js ; exit 0"
   },
   "repository": {
