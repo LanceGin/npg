@@ -1,11 +1,11 @@
 {
-  "name": "weaver",
-  "version": "1.0.0",
-  "description": "Cross language scaffold script.",
+  "name": "npg",
+  "version": "0.0.1",
+  "description": "Node package generator.",
   "bin": {
-    "weaver": "./lib/weaver.js"
+    "npg": "./lib/npg.js"
   },
-  "main": "lib/weaver.js",
+  "main": "lib/npg.js",
   "scripts": {
     "test": "mocha",
     "build": "babel src -d lib",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LanceGin/weaver.git"
+    "url": "git+https://github.com/LanceGin/npg.git"
   },
   "keywords": [
     "scaffold",
@@ -25,9 +25,9 @@
   "author": "lancegin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LanceGin/weaver/issues"
+    "url": "https://github.com/LanceGin/npg/issues"
   },
-  "homepage": "https://github.com/LanceGin/weaver#readme",
+  "homepage": "https://github.com/LanceGin/npg#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
