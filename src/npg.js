@@ -2,10 +2,10 @@
 
 const program = require('commander');
 const init = require('./init.js');
-const packageInfo = require('../package.json');
+const pkg = require('../package.json');
 
 program
-  .version(packageInfo.version)
+  .version(pkg.version)
   .usage('<command> [options]');
 
 program
