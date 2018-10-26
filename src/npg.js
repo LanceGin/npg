@@ -13,7 +13,7 @@ program
   .description('generate a new node module')
   .alias('i')
   .action((name) => {
-    init(name);
+    init(program, name);
   });
 
 program
