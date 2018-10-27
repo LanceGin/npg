@@ -11,7 +11,7 @@
 ## Installation
 
 ```shell
-npm install ginpg -g
+npm install gin-npg -g
 ```
 
 ## Usage
