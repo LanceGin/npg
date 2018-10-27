@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Metalsmith = require('metalsmith');
+const Handlebars = require('handlebars');
 
 const isDir = (name) => {
   const target = path.resolve(process.cwd(), path.join('.', name));
@@ -42,9 +44,33 @@ const promptAns = (name) => {
   return ans;
 };
 
+const modTmplate = (metadata={}, src, dest='.') => {
+  const mod = new Promise((resolve, reject) => {
+    Metalsmith(process.cwd())
+      .metadata(metadata)
+      .clean(false)
+      .source(src)
+      .destination(dest)
+      .use((files, metalsmith, done) => {
+        console.log(3333, files, metalsmith, done);
+      })
+      .build((err) =>{
+        err ? reject(err) : resolve();
+      });
+  });
+  return mod;
+};
+
 const createProject = (name) => {
   console.log('create project.');
   promptAns(name).then((ans) => {
+    modTmplate(ans, './template')
+      .then((res) => {
+        console.log(111, res);
+      })
+      .catch((err) => {
+        console.log(2222, err);
+      });
     console.log(`your package name is：${ans.name}`);
     console.log(`your package version is：${ans.version}`);
     console.log(`your package description is：${ans.desc}`);
