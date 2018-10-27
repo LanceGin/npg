@@ -6,6 +6,8 @@ const Handlebars = require('handlebars');
 const chalk = require('chalk');
 const logSymbols = require('log-symbols');
 
+const TEMPLATE_DIR = path.join(__dirname, '..', 'template');
+
 const isDir = (name) => {
   const target = path.resolve(process.cwd(), path.join('.', name));
   try {
@@ -71,7 +73,7 @@ const modTmplate = (metadata={}, src, dest='.') => {
 const createProject = (name) => {
   const dest = path.resolve(process.cwd(), path.join('.', name));
   promptAns(name).then((ans) => {
-    modTmplate(ans, './template', dest)
+    modTmplate(ans, TEMPLATE_DIR, dest)
       .then(() => {
         console.log(logSymbols.success, chalk.green('success!:)'))
         console.log()
