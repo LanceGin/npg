@@ -29,6 +29,15 @@ const promptAns = (name) => {
       message: 'the description of the package:',
       default: name,
     },
+    {
+      name: 'author',
+      message: 'author:',
+    },
+    {
+      name: 'license',
+      message: 'license:',
+      default: null,
+    },
   ]);
   return ans;
 };
