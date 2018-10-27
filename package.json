@@ -1,5 +1,5 @@
 {
-  "name": "npg",
+  "name": "@gin/npg",
   "version": "0.0.1",
   "description": "Node package generator.",
   "bin": {
